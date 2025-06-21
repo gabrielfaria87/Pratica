@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.fixed-box{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    color: blue;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.stick-header{
+    position: sticky;
+    background-color: aqua;
+    color: blue;
+    padding: 16px;
+    text-align: center;
+    top: 0;
+    /* garante que a div fique acima dos outros elementos */
+    z-index: 100; 
+
+}
+
+.content{
+    padding: 20px;
+    margin-top: 20px;
+
+}
+
+.section{
+    height: 400px;
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: wheat;
+    border: 2px dashed rgba(red, green, blue, alpha);
+}

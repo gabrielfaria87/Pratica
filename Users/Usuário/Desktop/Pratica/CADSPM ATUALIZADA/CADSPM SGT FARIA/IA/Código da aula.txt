@@ -1,0 +1,61 @@
+#=========================================================
+# modelo Denso (MLP) para classificação de dígitos - MNIST
+#=========================================================
+
+# Importando bibliotecas principais TensorFlow
+import tensorflow as tf
+from tensorflow.keras.datasets import mnist # Dataset mnist
+from tensorflow.keras.models import Sequential # Modelo sequencial (camadas empilhadas)
+from tensorflow.keras. layers import Dense, Flatten # Camadas densas e flatten, totalmente conectada - Flatten = achata a imagem
+
+#========================================================
+# carregando dados do modelo
+#========================================================
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data() # Carrega os dados do treino e teste
+
+
+# Normalizando os dados
+
+x_train, x_test = x_train / 255.0, x_test / 255.0 # Normaliza os dados dividindo por 255.0
+
+#========================================================
+# Construindo o modelo sequencial da rede neural
+#========================================================
+
+model = Sequential([               
+    # transforma a imagem 2D em um vetor 1D
+    # Camada de entrada, achata a imagem 28x28 para um vetor de 784 elementos para entrada na camada densa
+      Flatten(input_shape=(28, 28)), 
+                                   
+   # Camada oculta com 128 neurônios e função de ativação ReLU (não-linearidade)
+      Dense(128, activation='relu'),
+                                   
+     # Camada de saída com 10 neurônios, um para cada digito (números de 0 a 9) e função de ativação softmax (probabilidades))
+     # SOftmax (saida de probabilidades somado 1)
+     Dense(10, activation='softmax')
+])
+      
+
+#========================================================
+# Compilando o modelo: definindo como ele vai aprender
+#========================================================
+
+model.compile(
+    
+    optimizer='adam', # Algoritmo de otimização Adam, ajusta os pesos automaticamente
+    loss='sparse_categorical_crossentropy', # Função de perda para classificação multiclasse para rotulos inteiros (não one-hot)
+    metrics=['accuracy'] # Métrica de avaliação: (acurácia) que vamos acompanhar
+    )
+
+#=======================================================
+# Treinando modelo com dados de treino
+#=======================================================
+
+model.fit(x_train, y_train, epochs=5) # Treina o modelo com 5 épocas (passagens pelos dados de treino)
+
+#=======================================================
+# Avaliando o modelo com dados de teste
+#=======================================================
+
+model.evaluate(x_test, y_test) # Avalia o modelo com os dados de teste e retorna a perda de acurácia final

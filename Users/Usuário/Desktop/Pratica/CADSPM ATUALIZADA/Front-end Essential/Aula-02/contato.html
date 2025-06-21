@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleform.css">
+   
+</head>
+<style>
+
+</style>
+<body>
+    <header>
+        <h1>loja Tech</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#hardware">hardware</a>
+            <a href="index.html#software">Software</a>
+            <a href="index.html#contato.html">Contato</a>
+        </nav>
+    </header>
+    <!-- Conteúdo principal - forms -->
+     <main>
+        <section>
+            <h2>Fale conosco</h2>
+            <form onsubmit="enviar(event)" id="formContato">
+                <!-- Campo nome -->
+                 <label for="Nome:">Nome:</label>
+                 <input type="text" id="email" name="nome" required placeholder="Digite o nome:">
+                 <!-- Campo e-mail -->
+                  <label for="email">E-mail:</label>
+                  <input type="email" id="email" name="email" required placeholder="Digite o e-mail">
+                  <!-- Campo comentário -->
+                   <label for="comentario">Comentário:</label>
+                   <textarea name="comentario" id="comentario" rows="5"></textarea>
+                   <!-- botão -->
+                    <button type="submit">Enviar</button>
+                
+
+            </form>
+        </section>
+     </main>
+
+    <footer class="rodape">
+        <p>&copy; 2025 - Lojas Tech. Todos os direitos reservados.</p>
+        <p>Contato: atendimento@lojatech.com.br</p>
+    </footer>
+    <script>
+        function enviar(event){
+            event.preventDefault();
+            alert("mensagem enviada com sucesso!!")
+            document.getElementById("formContato").reset()
+        }
+    </script>
+
+
+</body>
+</html>

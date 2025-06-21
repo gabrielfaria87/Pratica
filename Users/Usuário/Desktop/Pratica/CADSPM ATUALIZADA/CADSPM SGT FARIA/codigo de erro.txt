@@ -1,0 +1,8 @@
+deploying WSL2 distributions
+ensuring main distro is deployed: deploying "docker-desktop": importing WSL distro "Não há suporte para WSL2 com a configuração atual do computador.\r\nHabilite o componente opcional \"Plataforma da Máquina Virtual\" e verifique se a virtualização está habilitada no BIOS.\r\nHabilite a \"Plataforma da Máquina Virtual\" executando: wsl.exe --install --no-distribution\r\nPara obter informações, visite https://aka.ms/enablevirtualization\r\nCódigo de erro: Wsl/Service/RegisterDistro/CreateVm/HCS/HCS_E_HYPERV_NOT_INSTALLED\r\n" output="docker-desktop": exit code: 4294967295: running WSL command wsl.exe C:\Windows\System32\wsl.exe --import docker-desktop <HOME>\AppData\Local\Docker\wsl\main C:\Program Files\Docker\Docker\resources\wsl\wsl-bootstrap.tar --version 2: Não há suporte para WSL2 com a configuração atual do computador.
+Habilite o componente opcional "Plataforma da Máquina Virtual" e verifique se a virtualização está habilitada no BIOS.
+Habilite a "Plataforma da Máquina Virtual" executando: wsl.exe --install --no-distribution
+Para obter informações, visite https://aka.ms/enablevirtualization
+Código de erro: Wsl/Service/RegisterDistro/CreateVm/HCS/HCS_E_HYPERV_NOT_INSTALLED
+: exit status 0xffffffff
+checking if isocache exists: CreateFile \\wsl$\docker-desktop-data\isocache\: O nome da rede não foi encontrado.

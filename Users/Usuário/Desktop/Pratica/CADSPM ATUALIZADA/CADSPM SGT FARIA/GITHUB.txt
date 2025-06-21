@@ -1,0 +1,39 @@
+git status
+git init
+git add .
+git branch -M main
+git commit -m "first commit"
+git checkout
+git remote add origin https://github.com/gabrielfaria87/projeto-react.git
+git push -u origin main
+git pull origin main
+
+comando que reseta a pasta retirando a pasta .git
+
+rm -rf .git
+
+--------------------------------------------------passo a passo--------------------------------------
+
+Passo a passo para o exercício 02
+1 - Aceitar o convite pelo e-mail – Criar uma pasta em Meus documentos ProjetoClone.
+2 – Entrar no repositório e clonar o projeto – git clone <pegar o link>
+3 – Abra o terminal na pasta de projeto e clone utilizando o git clone
+4 – Abrir a pasta do projeto baixado o arquivo index.html
+5 – Criar uma branch com o nome que está no projeto. Entrar na pasta exercício
+git branch <nome da branch>
+	obs: Utilize o git branch para verificar todas as branch’s existente.
+	obs: faça o comando git checkout <nome da branch>
+6 – Entra na pasta policiais e criar um arquivo com nome da branch com extensão .html
+7 – Escreva alguma coisa simples na sua página – Fale sobre um recurso em html
+8 –  No terminal utilize os comandos:
+	git add .
+	git commit –M “mensagem”
+	git push origin <nome da branch>
+9 – Será feito o merge (juntar as branch’s em uma só) feito pelo dono do github que está o repositório.
+10 – Após este processo todos deverão fazer o pull
+git pull origin prod
+
+Atualiza o repositório com as mudanças do remoto
+git fetch origin
+Baixa as mudanças do remoto e aplica-as sobre suas alterações locais
+git pull --rebase

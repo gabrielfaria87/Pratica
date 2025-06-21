@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+    
+
+
+.quadrado{
+    border: 2px solid #4e4e4e;
+    background-color: rgb(228, 133, 156);
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    right: 20px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    align-items: center;
+
+}
+
+.retangulo{
+    border: 2px dashed #4e4e4e;
+    background-color: rgb(228, 133, 156);
+    height: 100px;
+    width: 300px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    bottom: 250px;
+    margin-top: 300px;
+}
+
+.rodape{
+    border: 2px solid white;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgb(86, 86, 228);
+    width: 100%;
+    text-align: center;
+}

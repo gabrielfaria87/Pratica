@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h2>Minha tabela com formulário</h2>
+    </header>
+    <main>
+        <div class="container">
+            <form>
+                <fieldset>
+
+                
+                <table>
+                    <!-- primeira linha -->
+                     <tr>
+                        <td>
+                            <label for="nome">Nome completo:</label>
+                            <input type="text" id="nome" placeholder="Digite o nome" required>
+                    <!-- campo e-mail -->
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                    <!-- senha -->
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha">
+                        </td>
+                     
+                        <td>
+                           <label for="nascimento">data de nascimento:</label>
+                           <input type="date" id="nascimento" name="nascimento">
+                    <!-- lista suspensa (select) -->
+                     <!-- permite escolher -->
+                           <label for="estado">Estado</label>  
+                           <select name="estado" id="estado">
+                            <option value="">Selecione</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="MG">Minas Gerais</option>
+                          </select> 
+                        </td>
+                     </tr>
+                </table>
+                <label for="checkbox" name="termos" required>
+                    <input type="checkbox" name="termos" required>
+                        Aceito os termos e condições
+                </label>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </fieldset>
+            </form>
+
+        </div>
+    </main>
+    <footer>
+        &copy; Todos os direitos reservados!
+    </footer>
+</body>
+</html>

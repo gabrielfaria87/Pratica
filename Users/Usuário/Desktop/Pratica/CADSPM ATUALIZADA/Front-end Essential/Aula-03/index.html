@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td{
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+        th{
+            background-color: #4caf50;
+        }
+        caption{
+            font-size: 30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Cadastro de Pessoas</h2>
+    </header>
+    <h1>Tabela de produtos - exemplo em HTML</h1>
+    <main>
+        <div class="container">
+            <form onsubmit="enviar(event)">
+                <!-- agrupar elementos relacionados dentro do form -->
+                <fieldset>
+                    <!-- nome do produto -->
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" placeholder="Digite o nome" required>
+                    <!-- campo e-mail -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <!-- senha -->
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha">
+                    <!-- campo idade -->
+                    <label for="nascimento">data de nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento">
+                    <!-- lista suspensa (select) -->
+                     <!-- permite escolher -->
+                    <label for="estado">Estado</label>  
+                    <select name="estado" id="estado">
+                        <option value="">Selecione</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                    </select>
+                    <!-- Usado para confirmação de leitura e aceitação dos termos -->
+                    <label for="checkbox" name="termos" required>
+                        <input type="checkbox" name="termos" required>
+                        Aceito os termos e condições
+                    </label>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+
+                </fieldset>
+            </form>
+        </div>
+        <table>
+        <caption>Produtos em estoque</caption>
+        <!-- tr (rows linhas) - td (columns) -->
+         <!-- cabeçalho - primeira linha-->
+         <tr>
+            <th>Id</th>
+            <th>Produto</th>
+            <th>Categoria</th>
+            <th>Preço (R$)</th>
+            <th>Estoque</th>
+         </tr>
+         <!-- segunda linha -->
+          <tr>
+            <td>1</td>
+            <td>Mouse Gamer RGB</td>
+            <td>Periféricos</td>
+            <td>150,00</td>
+            <td>Sim</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Teclado</td>
+            <td>Periféricos</td>
+            <td>110,00</td>
+            <td>Sim</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Monitor 24"</td>
+            <td>Periféricos</td>
+            <td>290,00</td>
+            <td>Sim</td>
+          </tr>
+        </table>
+    </main>
+    <footer>
+        &copy; 2025 - Exemplo de tabela e formulário em HTML
+    </footer>
+
+    <br>
+    <br>
+    <hr>
+    <script>
+        function enviar(event){
+            event.preventDefault(); //impede o envio real do formulario
+            alert("Dados enviados com sucesso!!!");
+            event.target.reset()
+
+        }
+    </script>
+
+</body>
+</html>

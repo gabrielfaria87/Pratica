@@ -1,0 +1,17 @@
+-- - --- Funções do array (métodos) ------------
+- push - Insere valor  no final do array
+- pop - Remover último valor do array
+-- Adicionar valor arrai[x] = 50;
+- shift - Remover o primeiro valor do array
+- map - Percorrer o array e criar uma lista duplicada
+- length - contar elementos do array
+- splice - Pode apagar um elemento a partir do índice, e inserir elementos
+- split - tratara a string - desmembrar, separar, etc..
+foreach - Método de array (laço percorre todo array)
+Outras funções:
+- sort
+- rest - function x (...x) - juntar varios elementos em um array 
+- spread - (...) é usado para espalhar os elementos de um array
+
+-- Objetos - 
+-- Recursão - 
